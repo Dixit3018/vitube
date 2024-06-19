@@ -1,0 +1,16 @@
+<div class="row">
+  <app-navbar (sideBarStatus)="sideBarStatus($event)"></app-navbar>
+  @if (sidebar) {
+    <div class="col-md-2 p-0 m-0">
+      <h3 class="text-center">ViTube</h3>
+      <ul class="list-group list-group-flush p-0 m-0">
+        <li class="list-group-item">Home</li>
+        <li class="list-group-item">Trending</li>
+        <li class="list-group-item">Subscription</li>
+      </ul>
+    </div>
+  }
+  <div [class]="sidebar ? 'col-md-10' : 'col-md-12'">
+    <app-video-player></app-video-player>
+  </div>
+</div>
